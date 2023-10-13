@@ -2,13 +2,17 @@
 // Challenge 1
 // bool amProgrammer = "true"; // Error, el valor de amProgrammer es un string, no un boolean
 // La solución es:   
-bool amProgrammer = Boolean.Parse("true");
-Console.WriteLine($"{amProgrammer.GetType()}: {amProgrammer}");
+bool amProgrammer = true;
+Console.WriteLine(amProgrammer);
+/*bool amProgrammer = Boolean.Parse("true");
+Console.WriteLine($"{amProgrammer.GetType()}: {amProgrammer}");*/
 
 // int Age = 27.9; // Error, el valor de Age es un double, no un int
 // La solución es: 
-int Age = (int)Math.Round(27.9);
-Console.WriteLine($"{Age.GetType()}: {Age}");
+int Age = 28;
+Console.WriteLine(Age);
+/*int Age = (int)Math.Round(27.9);
+Console.WriteLine($"{Age.GetType()}: {Age}");*/
 
 List<string> Names = new List<string>();
 // Names = "Monica"; // Error, no se puede agregar directamente un valor string en una lista
@@ -20,7 +24,8 @@ MyDictionary.Add("Hello", "0");
 // MyDictionary.Add("Hi there", 0); // Error, el valor de la key "Hi there" no puede ser un int 
 // porque la declaración del diccionario es <string, string>
 // La solución es:
-MyDictionary.Add("Hi there", (0).ToString());
+MyDictionary.Add("Hi there", "0");
+// MyDictionary.Add("Hi there", (0).ToString());
 foreach (var num in MyDictionary)
 {
     Console.WriteLine(num);
@@ -61,7 +66,7 @@ foreach (int num in EvenMoreNumbers)
     {
         // num = 0; // Error, no se puede inicializar la variable num porque corresponde a la iteración
         // foreach
-        // La solución es: no declarar y imprimir num por consola
+        // La solución es: no declarar nuevamente y imprimir num por consola
         Console.WriteLine(num);
     }
 }
